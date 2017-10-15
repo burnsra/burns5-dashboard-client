@@ -95,6 +95,8 @@ class DataPercentage extends React.Component {
       barStyle = barStyle + " bg-warning";
     }else if (this.props.data_percent >= 75) {
       barStyle = barStyle + " bg-info";
+    } else {
+      barStyle = barStyle + " bg-success";
     }
 
     return (
