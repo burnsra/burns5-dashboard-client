@@ -40,7 +40,7 @@ class Wireless extends Component {
             <WirelessDetail key={item.name + 'wireless'} name={item.name} phonenumber={item.phonenumber} data={item.data} data_msg={item.data_msg} data_percent={item.data_percent} />
             )}
           </tbody>
-          <tfoot><tr className="table-active"><td><small>Last Updated { updated }</small></td></tr></tfoot>
+          <tfoot><tr className="table-active"><td><small>Last Updated { updated || "{updated}" }</small></td></tr></tfoot>
         </table>
       </div>
     );
@@ -60,7 +60,7 @@ class MonthlyProgress extends React.Component {
     }
     progress = end.fromNow();
 
-    return <tr className="table-active"><td><small>Data resets { progress }</small></td></tr>;
+    return <tr className="table-active"><td><small>Data resets { progress || "{progress}" }</small></td></tr>;
   }
 }
 

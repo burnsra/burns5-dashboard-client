@@ -42,7 +42,7 @@ class Grades extends Component {
             {arrGrades.map( (item,index) =>
               <StudentDetail key={index} name={item.name} courses={item.courses} />
             )}
-          <tfoot><tr className="table-active"><td colSpan="2"><small>Last Updated { updated }</small></td></tr></tfoot>
+          <tfoot><tr className="table-active"><td colSpan="2"><small>Last Updated { updated || "{updated}" }</small></td></tr></tfoot>
       </table>
       </div>
     );

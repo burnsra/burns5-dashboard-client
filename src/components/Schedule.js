@@ -37,7 +37,7 @@ class Schedule extends Component {
             <tbody>
                 {arrSchedule.map(item => <DaySchedule today={today} key={item.date} date={item.date} day={item.day} time={item.time} />)}
             </tbody>
-            <tfoot><tr className="table-active"><td colSpan="2"><small>Last Updated { updated }</small></td></tr></tfoot>
+            <tfoot><tr className="table-active"><td colSpan="2"><small>Last Updated { updated || "{updated}" }</small></td></tr></tfoot>
         </table>
       </div>
     );
