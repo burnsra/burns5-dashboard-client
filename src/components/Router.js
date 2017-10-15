@@ -7,8 +7,10 @@ class Router extends Component {
     return (
       <div className="container">
         <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route path='/home' component={Home}/>
+          <Route path='/' component={Home}/>
+          <Route path='/grades' component={Home}/>
+          <Route path='/schedules' component={Home}/>
+          <Route path='/wireless' component={Home}/>
         </Switch>
       </div>
     );

@@ -32,7 +32,13 @@ class Header extends Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav className="mr-auto" navbar>
               <li className="nav-item">
-                <NavLink exact className="nav-link" to='/' onClick={this._closeNav.bind(this)}>Home</NavLink>
+                <NavLink exact className="nav-link" to='/grades' onClick={this._closeNav.bind(this)}>Grades</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink exact className="nav-link" to='/schedules' onClick={this._closeNav.bind(this)}>Schedules</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink exact className="nav-link" to='/wireless' onClick={this._closeNav.bind(this)}>Wireless</NavLink>
               </li>
             </Nav>
           </Collapse>
