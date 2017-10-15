@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header'
+import Router from './components/Router'
 import './App.css';
 
 class App extends Component {
@@ -7,9 +8,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <p>
-          Dashboard for the Burns5 family.
-        </p>
+        <Router className="container" />
       </div>
     );
   }
