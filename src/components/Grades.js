@@ -36,17 +36,15 @@ class Grades extends Component {
     });
 
     return (
-      [
       <div className="Grades">
       <table className="table table-bordered table-striped table-sm">
           <thead className="thead-inverse"><tr><th width="66%">Course</th><th>Grade</th></tr></thead>
             {arrGrades.map( (item,index) =>
-              <StudentDetail key={index} index={index} name={item.name} courses={item.courses} />
+              <StudentDetail key={index} name={item.name} courses={item.courses} />
             )}
           <tfoot><tr className="table-active"><td colSpan="2"><small>Last Updated { updated }</small></td></tr></tfoot>
       </table>
       </div>
-    ]
     );
   }
 }
@@ -55,9 +53,9 @@ class StudentDetail extends React.Component {
   render() {
     return (
       [
-        <tbody><DataTitle key={this.props.index} index={this.props.index} name={this.props.name} /></tbody>,
-        <tbody>{this.props.courses.map( (item,index) =>
-          <MyGradesChild key={index} index={index} course={item.course} grade={item.grade} />
+        <tbody key={this.props.name+'student'}><DataTitle name={this.props.name} /></tbody>,
+        <tbody key={this.props.name+'courses'}>{this.props.courses.map( (item,index) =>
+          <MyGradesChild key={index} course={item.course} grade={item.grade} />
         )}</tbody>
       ]
     );
