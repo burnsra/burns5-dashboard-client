@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import Schedule from './Schedule'
+import Wireless from './Wireless'
 
 class Router extends Component {
   render() {
@@ -11,7 +12,7 @@ class Router extends Component {
           <Route exact path='/' component={Home}/>
           <Route path='/grades' component={Home}/>
           <Route path='/schedules' component={Schedule}/>
-          <Route path='/wireless' component={Home}/>
+          <Route path='/wireless' component={Wireless}/>
         </Switch>
       </div>
     );
